@@ -2,6 +2,13 @@
 
 This file provides guidance to Claude Code (claude.ai/code) when working with code in this repository.
 
+## Rules
+
+- **Fix root causes, not symptoms.** Don't add aliases, shims, or suppressions when the underlying structure can be corrected.
+- **Verify before asserting.** Check if a file exists before saying it doesn't. Read a config before claiming what it contains.
+- **One source of truth.** Reuse existing config (e.g. tsconfig paths) instead of duplicating it in another tool.
+- **Research before implementing.** Look up current docs via Context7 or web search. Don't rely on training data for library APIs, configs, or conventions.
+
 ## Commands
 
 - `pnpm dev` — start Vite dev server with HMR
@@ -15,7 +22,7 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 - **React 19** with **TypeScript 5.9** (strict mode, `noUnusedLocals`, `noUnusedParameters`)
 - **Vite 8** (beta) as bundler
 - **Tailwind CSS v4** via `@tailwindcss/vite` plugin (CSS-first config, no `tailwind.config.js`)
-- **shadcn/ui v4** (radix-vega style, zinc base color, oklch CSS variables)
+- **shadcn/ui v4** (base-vega style using `@base-ui/react`, zinc base color, oklch CSS variables, RTL enabled)
 - **Biome** for linting and formatting (indentStyle: tab)
 - **React Compiler** enabled via `babel-plugin-react-compiler`
 - **pnpm** as package manager

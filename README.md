@@ -17,7 +17,7 @@ pnpm dev
 - **React 19** with **TypeScript 5.9** (strict mode)
 - **Vite 8** as bundler
 - **Tailwind CSS v4** (CSS-first config)
-- **shadcn/ui v4** (radix-vega style, zinc base color)
+- **shadcn/ui v4** (base-vega style, zinc base color)
 - **React Compiler** enabled
 - **Biome** for linting and formatting
 

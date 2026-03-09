@@ -11,6 +11,7 @@
 		"preview": "vite preview"
 	},
 	"dependencies": {
+		"@base-ui/react": "^1.2.0",
 		"@fontsource-variable/outfit": "^5.2.8",
 		"@tailwindcss/vite": "^4.2.1",
 		"class-variance-authority": "^0.7.1",
