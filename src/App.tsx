@@ -1,34 +1,61 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
+import { Moon, Sparkles, Sun } from "lucide-react";
+import { useEffect, useState } from "react";
+import { Button } from "@/components/ui/button";
+import {
+	Card,
+	CardContent,
+	CardDescription,
+	CardHeader,
+	CardTitle,
+} from "@/components/ui/card";
 
 function App() {
-  const [count, setCount] = useState(0)
+	const [dark, setDark] = useState(() =>
+		document.documentElement.classList.contains("dark"),
+	);
 
-  return (
-    <>
-      <div>
-        <a href="https://vite.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.tsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
-    </>
-  )
+	useEffect(() => {
+		document.documentElement.classList.toggle("dark", dark);
+	}, [dark]);
+
+	return (
+		<div className="flex min-h-screen items-center justify-center bg-background p-6">
+			<Card className="w-full max-w-md">
+				<CardHeader>
+					<div className="flex items-start justify-between">
+						<div className="flex h-10 w-10 items-center justify-center rounded-lg bg-primary/10 text-primary">
+							<Sparkles className="h-5 w-5" />
+						</div>
+						<Button
+							variant="ghost"
+							size="icon"
+							onClick={() => setDark((d) => !d)}
+						>
+							{dark ? (
+								<Sun className="h-4 w-4" />
+							) : (
+								<Moon className="h-4 w-4" />
+							)}
+						</Button>
+					</div>
+					<CardTitle className="text-xl">Welcome</CardTitle>
+					<CardDescription>
+						React 19, Vite 8, Tailwind v4, and shadcn/ui — all wired up and
+						ready to go.
+					</CardDescription>
+				</CardHeader>
+				<CardContent>
+					<p className="text-sm text-muted-foreground">
+						Edit{" "}
+						<code className="rounded bg-muted px-1.5 py-0.5 font-mono text-xs text-foreground">
+							src/App.tsx
+						</code>{" "}
+						to start building.
+					</p>
+				</CardContent>
+			</Card>
+		</div>
+	);
 }
 
-export default App
+export default App;
