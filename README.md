@@ -14,7 +14,7 @@ pnpm dev
 
 ## Tech Stack
 
-- **React 19** with **TypeScript 5.9** (strict mode)
+- **React 19** with **TypeScript 6** (strict mode)
 - **Vite 8** as bundler
 - **Tailwind CSS v4** (CSS-first config)
 - **shadcn/ui v4** (base-vega style, zinc base color)
