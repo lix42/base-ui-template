@@ -46,10 +46,10 @@ function App() {
         </CardHeader>
         <CardContent>
           <p className="text-sm text-muted-foreground">
-            Edit{" "}
+            Edit
             <code className="rounded bg-muted px-1.5 py-0.5 font-mono text-xs text-foreground">
               src/App.tsx
-            </code>{" "}
+            </code>
             to start building.
           </p>
         </CardContent>
