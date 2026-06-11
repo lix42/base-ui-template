@@ -14,7 +14,8 @@
       "Bash(command -v jq)",
       "Bash(jq --version)",
       "Bash(command -v node)",
-      "Bash(chmod +x .claude/hooks/biome-format.sh .claude/hooks/typecheck.sh)"
+      "Bash(chmod +x .claude/hooks/biome-format.sh .claude/hooks/typecheck.sh)",
+      "Skill(ship:ship)"
     ]
   },
   "hooks": {
@@ -39,7 +40,8 @@
     ]
   },
   "enabledPlugins": {
-    "tasks@lix42": true
+    "tasks@lix42": true,
+    "ship@lix42": true
   },
   "extraKnownMarketplaces": {
     "lix42": {
