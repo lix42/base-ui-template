@@ -8,5 +8,26 @@
       "mcp__claude-in-chrome__*",
       "Bash(pnpm *)"
     ]
+  },
+  "hooks": {
+    "PostToolUse": [
+      {
+        "matcher": "Edit|Write",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "${CLAUDE_PROJECT_DIR}/.claude/hooks/biome-format.sh",
+            "statusMessage": "Formatting with Biome..."
+          },
+          {
+            "type": "command",
+            "command": "${CLAUDE_PROJECT_DIR}/.claude/hooks/typecheck.sh",
+            "async": true,
+            "asyncRewake": true,
+            "statusMessage": "Type-checking..."
+          }
+        ]
+      }
+    ]
   }
 }
