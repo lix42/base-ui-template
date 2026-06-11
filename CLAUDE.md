@@ -23,7 +23,7 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 - **Vite 8** (beta) as bundler
 - **Tailwind CSS v4** via `@tailwindcss/vite` plugin (CSS-first config, no `tailwind.config.js`)
 - **shadcn/ui v4** (base-vega style using `@base-ui/react`, zinc base color, oklch CSS variables, RTL enabled)
-- **Biome** for linting and formatting (indentStyle: tab)
+- **Biome** for linting and formatting (indentStyle: space)
 - **React Compiler** enabled via `babel-plugin-react-compiler`
 - **pnpm** as package manager
 
