@@ -6,7 +6,15 @@
       "mcp__plugin_context7_context7__resolve-library-id",
       "mcp__plugin_context7_context7__query-docs",
       "mcp__claude-in-chrome__*",
-      "Bash(pnpm *)"
+      "Bash(pnpm *)",
+      "Bash(rm .git:*)",
+      "Bash(gh repo:*)",
+      "Bash(git:*)",
+      "Bash(npm view *)",
+      "Bash(command -v jq)",
+      "Bash(jq --version)",
+      "Bash(command -v node)",
+      "Bash(chmod +x .claude/hooks/biome-format.sh .claude/hooks/typecheck.sh)"
     ]
   },
   "hooks": {
