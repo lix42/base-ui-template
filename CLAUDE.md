@@ -16,15 +16,18 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 - `pnpm lint` — run Biome check across the project
 - `pnpm lint:fix` — run Biome check with auto-fix
 - `pnpm preview` — preview the production build
+- `pnpm test` — run Vitest in watch mode
+- `pnpm test:run` — run Vitest once (CI / single run)
 
 ## Tech Stack
 
-- **React 19** with **TypeScript 5.9** (strict mode, `noUnusedLocals`, `noUnusedParameters`)
+- **React 19** with **TypeScript 6** (strict mode, `noUnusedLocals`, `noUnusedParameters`)
 - **Vite 8** (beta) as bundler
 - **Tailwind CSS v4** via `@tailwindcss/vite` plugin (CSS-first config, no `tailwind.config.js`)
 - **shadcn/ui v4** (base-vega style using `@base-ui/react`, zinc base color, oklch CSS variables, RTL enabled)
 - **Biome** for linting and formatting (indentStyle: space)
 - **React Compiler** enabled via `babel-plugin-react-compiler`
+- **Vitest** with **React Testing Library** for tests (jsdom env; config in `vite.config.ts`)
 - **pnpm** as package manager
 
 ## Project Structure
@@ -33,6 +36,7 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 - `src/components/ui/` — shadcn/ui components (add via `pnpm dlx shadcn@latest add <component>`)
 - `src/lib/utils.ts` — `cn()` helper (clsx + tailwind-merge)
 - `src/index.css` — global styles, Tailwind imports, CSS custom properties for theming
+- `src/test/setup.ts` — Vitest setup (jest-dom matchers, RTL cleanup); tests live beside source as `*.test.tsx`
 
 ## Path Aliases
 
