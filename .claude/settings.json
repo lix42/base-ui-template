@@ -30,12 +30,23 @@
           {
             "type": "command",
             "command": "${CLAUDE_PROJECT_DIR}/.claude/hooks/typecheck.sh",
+            "statusMessage": "Type-checking...",
             "async": true,
-            "asyncRewake": true,
-            "statusMessage": "Type-checking..."
+            "asyncRewake": true
           }
         ]
       }
     ]
+  },
+  "extraKnownMarketplaces": {
+    "lix42": {
+      "source": {
+        "source": "git",
+        "url": "https://github.com/lix42/claude-plugins.git"
+      }
+    }
+  },
+  "enabledPlugins": {
+    "tasks@lix42": true
   }
 }
