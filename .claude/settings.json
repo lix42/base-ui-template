@@ -38,15 +38,16 @@
       }
     ]
   },
+  "enabledPlugins": {
+    "tasks@lix42": true
+  },
   "extraKnownMarketplaces": {
     "lix42": {
       "source": {
         "source": "git",
         "url": "https://github.com/lix42/claude-plugins.git"
-      }
+      },
+      "autoUpdate": true
     }
-  },
-  "enabledPlugins": {
-    "tasks@lix42": true
   }
 }
